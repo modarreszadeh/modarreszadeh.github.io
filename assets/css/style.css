@@ -1,0 +1,9 @@
+table {
+    border: 4px black solid;
+    border-top: 4px black dashed;
+    border-right-color: blueviolet;
+    border-left-color: blueviolet;
+    border-bottom-color: blueviolet;
+    padding: 1px;
+    margin: 25px;
+}
