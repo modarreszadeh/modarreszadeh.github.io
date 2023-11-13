@@ -1,9 +1,123 @@
+@font-face {
+  font-family: "vazir";
+  src: url("/assets/font/Vazirmatn/static/Vazirmatn-Regular.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  font-family: "vazir";
+  margin-top: 50px;
+}
+
+div + p {
+  margin: auto;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.paragraph-content {
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 table {
-    border: 4px black solid;
-    border-top: 4px black dashed;
-    border-right-color: blueviolet;
-    border-left-color: blueviolet;
-    border-bottom-color: blueviolet;
-    padding: 1px;
-    margin: 25px;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px auto;
+}
+
+th,
+td {
+  border: 1px solid burlywood;
+  padding: 10px;
+  text-align: center;
+}
+
+thead {
+  background-color: darkgray;
+  color: white;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+footer > center {
+  color: brown;
+}
+
+@media screen and (max-width: 600px) {
+  .paragraph-content {
+    width: 100%;
+  }
+
+  table {
+    margin: 15px;
+  }
+}
+
+@media print {
+  body {
+    font-size: 12pt;
+  }
+
+  h1,
+  h2 {
+    page-break-after: avoid;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  thead {
+    background-color: lightgray;
+    color: black;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+nav {
+  background-color: darkgray;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+nav a {
+  color: black;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2em;
 }
