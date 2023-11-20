@@ -1,72 +1,260 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.20.1: https://docutils.sourceforge.io/" />
-<title>help.rst</title>
-<style type="text/css">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="generator"
+      content="Docutils 0.20.1: https://docutils.sourceforge.io/"
+    />
+    <title>help.rst</title>
+    <style type="text/css">
+      /* Use these two if the main document direction is RTL */
+      body {
+        direction: rtl;
+        text-align: justify;
+        font-family: "Nazli", Geneva, sans-serif;
+        font-size: 1.1em;
+      }
 
-/* Use these two if the main document direction is RTL */
-body {
-    direction: rtl;
-    text-align: justify;
-    font-family: 'Nazli', Geneva, sans-serif;
-    font-size: 1.1em;
-}
+      div.sidebar {
+        float: left !important;
+      }
 
-div.sidebar {
-    float: left !important;
-}
-
-/* The next 3 rules are very useful in documents containing pieces
+      /* The next 3 rules are very useful in documents containing pieces
 of code in english */
-/* Use this if you all your literal blocks (::) are LTR */
-pre {
-    direction: ltr;
-    unicode-bidi: embed;
-}
+      /* Use this if you all your literal blocks (::) are LTR */
+      pre {
+        direction: ltr;
+        unicode-bidi: embed;
+      }
 
-/* Use this if you all your inline literals (``) are LTR */
-tt {
-    direction: ltr;
-    unicode-bidi: embed;
-}
+      /* Use this if you all your inline literals (``) are LTR */
+      tt {
+        direction: ltr;
+        unicode-bidi: embed;
+      }
 
-/* Use this if you all your interpretted text (`) is LTR */
-cite {
-    direction: ltr;
-    unicode-bidi: embed;
-}
+      /* Use this if you all your interpretted text (`) is LTR */
+      cite {
+        direction: ltr;
+        unicode-bidi: embed;
+      }
 
-/* Allow manual direction override by class directive and roles */
-.rtl {
-    direction: rtl;
-}
+      /* Allow manual direction override by class directive and roles */
+      .rtl {
+        direction: rtl;
+      }
 
-.ltr {
-    direction: ltr;
-}
+      .ltr {
+        direction: ltr;
+      }
 
-.center {
-    text-align: center;
-}
+      .center {
+        text-align: center;
+      }
 
-.toc-backref {
-    font-size: 1em;
-}
+      .toc-backref {
+        font-size: 1em;
+      }
 
-.section h1 {
-    font-size: 1.3em;
-}
+      .section h1 {
+        font-size: 1.3em;
+      }
 
-.section h2 {
-    font-size: 1.3em;
-}
-</style>
-<style type="text/css">
+      .section h2 {
+        font-size: 1.3em;
+      }
+    </style>
+    <style type="text/css">
+      @font-face {
+        font-family: "vazir";
+        src: url("/assets/font/Vazirmatn/static/Vazirmatn-Regular.ttf")
+          format("truetype");
+        font-style: normal;
+        font-weight: normal;
+      }
 
-/*
+      body {
+        font-family: "vazir";
+      }
+
+      .adbox {
+        margin-top: 25px;
+      }
+
+      nav {
+        background-color: black;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+      }
+
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 1.2em;
+      }
+
+      th {
+        color: brown;
+      }
+
+      #main-title {
+        color: white;
+        background-color: darkgray;
+      }
+
+      .paragraph-content {
+        color: white;
+        background-color: darkslategray;
+        width: 75%;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 60px;
+      }
+
+      .header-container {
+        grid-area: header;
+      }
+
+      .ads-container {
+        grid-area: ads;
+      }
+
+      .content-container {
+        background: lightgray;
+        grid-area: content;
+      }
+
+      .footer-container {
+        background: lightpink;
+        grid-area: footer;
+      }
+
+      .container {
+        font-size: 1.5em;
+        min-height: 300px;
+        width: 100%;
+        background: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas:
+          "header"
+          "advert"
+          "content"
+          "footer";
+      }
+
+      @media (min-width: 300px) {
+        .container {
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto 1fr auto;
+          grid-template-areas:
+            "header header"
+            "ads content"
+            "footer footer";
+        }
+      }
+
+      @media (min-width: 400px) {
+        .container {
+          grid-template-areas:
+            "header header"
+            "ads   content"
+            "footer footer";
+        }
+      }
+
+      footer {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      div + p {
+        margin: auto;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      a {
+        color: green;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px auto;
+      }
+
+      th,
+      td {
+        border: 1px solid burlywood;
+        padding: 10px;
+        text-align: center;
+      }
+
+      thead {
+        background-color: darkgray;
+        color: white;
+      }
+
+      @media screen and (max-width: 600px) {
+        .paragraph-content {
+          width: 100%;
+        }
+
+        table {
+          margin: 15px;
+        }
+      }
+
+      @media print {
+        body {
+          font-size: 12pt;
+        }
+
+        h1,
+        h2 {
+          page-break-after: avoid;
+        }
+
+        table {
+          page-break-inside: auto;
+        }
+
+        th,
+        td {
+          border: 1px solid black;
+        }
+
+        thead {
+          background-color: lightgray;
+          color: black;
+        }
+      }
+    </style>
+    <style type="text/css">
+      /*
 *   math2html: convert LaTeX equations to HTML output.
 *
 *   Copyright (C) 2009,2010 Alex Fernández
@@ -90,452 +278,626 @@ cite {
 *             http://www.cs.tut.fi/~jkorpela/math/
 */
 
-/* Formulas */
-.formula {
-	text-align: center;
-	margin: 1.2em 0;
-	line-height: 1.4;
-}
-span.formula {
-	white-space: nowrap;
-}
-div.formula {
-	padding: 0.5ex;
-	margin-left: auto;
-	margin-right: auto;
-}
+      /* Formulas */
+      .formula {
+        text-align: center;
+        margin: 1.2em 0;
+        line-height: 1.4;
+      }
+      span.formula {
+        white-space: nowrap;
+      }
+      div.formula {
+        padding: 0.5ex;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-/* Basic features */
-a.eqnumber {
-	display: inline-block;
-	float: right;
-	clear: right;
-	font-weight: bold;
-}
-span.unknown {
-	color: #800000;
-}
-span.ignored, span.arraydef {
-	display: none;
-}
-.phantom {
-	visibility: hidden;
-}
-.formula i {
-	letter-spacing: 0.1ex;
-}
+      /* Basic features */
+      a.eqnumber {
+        display: inline-block;
+        float: right;
+        clear: right;
+        font-weight: bold;
+      }
+      span.unknown {
+        color: #800000;
+      }
+      span.ignored,
+      span.arraydef {
+        display: none;
+      }
+      .phantom {
+        visibility: hidden;
+      }
+      .formula i {
+        letter-spacing: 0.1ex;
+      }
 
-/* Alignment */
-.align-left, .align-l {
-	text-align: left;
-}
-.align-right, .align-r {
-	text-align: right;
-}
-.align-center, .align-c {
-	text-align: center;
-}
+      /* Alignment */
+      .align-left,
+      .align-l {
+        text-align: left;
+      }
+      .align-right,
+      .align-r {
+        text-align: right;
+      }
+      .align-center,
+      .align-c {
+        text-align: center;
+      }
 
-/* Structures */
-span.hspace {
-	display: inline-block;
-}
-span.overline, span.bar {
-	text-decoration: overline;
-}
-.fraction, .fullfraction, .textfraction {
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
-}
-span.formula .fraction,
-.textfraction,
-span.smallmatrix {
-	font-size: 80%;
-	line-height: 1;
-}
-span.numerator {
-	display: block;
-	line-height: 1;
-}
-span.denominator {
-	display: block;
-	line-height: 1;
-	padding: 0ex;
-	border-top: thin solid;
-}
-.formula sub, .formula sup {
-	font-size: 80%;
-}
-sup.numerator, sup.unit {
-	vertical-align: 80%;
-}
-sub.denominator, sub.unit {
-	vertical-align: -20%;
-}
-span.smallsymbol {
-	font-size: 75%;
-	line-height: 75%;
-}
-span.boldsymbol {
-	font-weight: bold;
-}
-span.sqrt {
-	display: inline-block;
-	vertical-align: middle;
-	padding: 0.1ex;
-}
-sup.root {
-	position: relative;
-	left: 1.4ex;
-}
-span.radical {
-	display: inline-block;
-	padding: 0ex;
-	/* font-size: 160%; for DejaVu, not required with STIX */
-	line-height: 100%;
-	vertical-align: top;
-	vertical-align: middle;
-}
+      /* Structures */
+      span.hspace {
+        display: inline-block;
+      }
+      span.overline,
+      span.bar {
+        text-decoration: overline;
+      }
+      .fraction,
+      .fullfraction,
+      .textfraction {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+      }
+      span.formula .fraction,
+      .textfraction,
+      span.smallmatrix {
+        font-size: 80%;
+        line-height: 1;
+      }
+      span.numerator {
+        display: block;
+        line-height: 1;
+      }
+      span.denominator {
+        display: block;
+        line-height: 1;
+        padding: 0ex;
+        border-top: thin solid;
+      }
+      .formula sub,
+      .formula sup {
+        font-size: 80%;
+      }
+      sup.numerator,
+      sup.unit {
+        vertical-align: 80%;
+      }
+      sub.denominator,
+      sub.unit {
+        vertical-align: -20%;
+      }
+      span.smallsymbol {
+        font-size: 75%;
+        line-height: 75%;
+      }
+      span.boldsymbol {
+        font-weight: bold;
+      }
+      span.sqrt {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0.1ex;
+      }
+      sup.root {
+        position: relative;
+        left: 1.4ex;
+      }
+      span.radical {
+        display: inline-block;
+        padding: 0ex;
+        /* font-size: 160%; for DejaVu, not required with STIX */
+        line-height: 100%;
+        vertical-align: top;
+        vertical-align: middle;
+      }
 
-span.root {
-	display: inline-block;
-	border-top: thin solid;
-	padding: 0ex;
-	vertical-align: middle;
-}
-div.formula .bigoperator,
-.displaystyle .bigoperator,
-.displaystyle .bigoperator {
-	line-height: 120%;
-	font-size: 140%;
-	padding-right: 0.2ex;
-}
-span.fraction .bigoperator,
-span.scriptstyle .bigoperator {
-	line-height: inherit;
-	font-size: inherit;
-	padding-right: 0;
-}
-span.bigdelimiter {
-	display: inline-block;
-}
-span.bigdelimiter.size1 {
-	transform: scale(1, 1.2);
-	line-height: 1.2;
-}
-span.bigdelimiter.size2 {
-	transform: scale(1, 1.62);
-	line-height: 1.62%;
+      span.root {
+        display: inline-block;
+        border-top: thin solid;
+        padding: 0ex;
+        vertical-align: middle;
+      }
+      div.formula .bigoperator,
+      .displaystyle .bigoperator,
+      .displaystyle .bigoperator {
+        line-height: 120%;
+        font-size: 140%;
+        padding-right: 0.2ex;
+      }
+      span.fraction .bigoperator,
+      span.scriptstyle .bigoperator {
+        line-height: inherit;
+        font-size: inherit;
+        padding-right: 0;
+      }
+      span.bigdelimiter {
+        display: inline-block;
+      }
+      span.bigdelimiter.size1 {
+        transform: scale(1, 1.2);
+        line-height: 1.2;
+      }
+      span.bigdelimiter.size2 {
+        transform: scale(1, 1.62);
+        line-height: 1.62%;
+      }
+      span.bigdelimiter.size3 {
+        transform: scale(1, 2.05);
+        line-height: 2.05%;
+      }
+      span.bigdelimiter.size4 {
+        transform: scale(1, 2.47);
+        line-height: 2.47%;
+      }
+      /* vertically stacked sub and superscript */
+      span.scripts {
+        display: inline-table;
+        vertical-align: middle;
+        padding-right: 0.2ex;
+      }
+      .script {
+        display: table-row;
+        text-align: left;
+        line-height: 150%;
+      }
+      span.limits {
+        display: inline-table;
+        vertical-align: middle;
+      }
+      .limit {
+        display: table-row;
+        line-height: 99%;
+      }
+      sup.limit,
+      sub.limit {
+        line-height: 100%;
+      }
+      span.embellished,
+      span.embellished > .base {
+        display: inline-block;
+      }
+      span.embellished > sup,
+      span.embellished > sub {
+        display: inline-block;
+        font-size: 100%;
+        position: relative;
+        bottom: 0.3em;
+        width: 0px;
+      }
+      span.embellished > sub {
+        top: 0.4em;
+      }
 
-}
-span.bigdelimiter.size3 {
-	transform: scale(1, 2.05);
-	line-height: 2.05%;
-}
-span.bigdelimiter.size4 {
-	transform: scale(1, 2.47);
-	line-height: 2.47%;
-}
-/* vertically stacked sub and superscript */
-span.scripts {
-	display: inline-table;
-	vertical-align: middle;
-	padding-right: 0.2ex;
-}
-.script {
-	display: table-row;
-	text-align: left;
-	line-height: 150%;
-}
-span.limits {
-	display: inline-table;
-	vertical-align: middle;
-}
-.limit {
-	display: table-row;
-	line-height: 99%;
-}
-sup.limit, sub.limit {
-	line-height: 100%;
-}
-span.embellished,
-span.embellished > .base {
-	display: inline-block;
-}
-span.embellished > sup,
-span.embellished > sub {
-	display: inline-block;
-	font-size: 100%;
-	position: relative;
-	bottom: 0.3em;
-	width: 0px;
-}
-span.embellished > sub {
-	top: 0.4em;
-}
+      /* Environments */
+      span.array,
+      span.bracketcases,
+      span.binomial,
+      span.environment {
+        display: inline-table;
+        text-align: center;
+        vertical-align: middle;
+      }
+      span.arrayrow,
+      span.binomrow {
+        display: table-row;
+        padding: 0;
+        border: 0;
+      }
+      span.arraycell,
+      span.bracket,
+      span.case,
+      span.binomcell,
+      span.environmentcell {
+        display: table-cell;
+        padding: 0ex 0.2ex;
+        line-height: 1; /* 99%; */
+        border: 0ex;
+      }
+      .environment.align > .arrayrow > .arraycell.align-l {
+        padding-right: 2em;
+      }
 
-/* Environments */
-span.array, span.bracketcases, span.binomial, span.environment {
-	display: inline-table;
-	text-align: center;
-	vertical-align: middle;
-}
-span.arrayrow, span.binomrow {
-	display: table-row;
-	padding: 0;
-	border: 0;
-}
-span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
-	display: table-cell;
-	padding: 0ex 0.2ex;
-	line-height: 1; /* 99%; */
-	border: 0ex;
-}
-.environment.align > .arrayrow > .arraycell.align-l {
-	padding-right: 2em;
-}
+      /* Inline binomials */
+      span.binom {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 80%;
+      }
+      span.binomstack {
+        display: block;
+        padding: 0em;
+      }
 
-/* Inline binomials */
-span.binom {
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
-	font-size: 80%;
-}
-span.binomstack {
-	display: block;
-	padding: 0em;
-}
+      /* Over- and underbraces */
+      span.overbrace {
+        border-top: 2pt solid;
+      }
+      span.underbrace {
+        border-bottom: 2pt solid;
+      }
 
-/* Over- and underbraces */
-span.overbrace {
-	border-top: 2pt solid;
-}
-span.underbrace {
-	border-bottom: 2pt solid;
-}
+      /* Stackrel */
+      span.stackrel {
+        display: inline-block;
+        text-align: center;
+      }
+      span.upstackrel {
+        display: block;
+        padding: 0em;
+        font-size: 80%;
+        line-height: 64%;
+        position: relative;
+        top: 0.15em;
+      }
+      span.downstackrel {
+        display: block;
+        vertical-align: bottom;
+        padding: 0em;
+      }
 
-/* Stackrel */
-span.stackrel {
-	display: inline-block;
-	text-align: center;
-}
-span.upstackrel {
-	display: block;
-	padding: 0em;
-	font-size: 80%;
-	line-height: 64%;
-	position: relative;
-	top: 0.15em;
+      /* Fonts */
+      .formula {
+        font-family: STIX, "DejaVu Serif", "DejaVu Math TeX Gyre", serif;
+      }
+      span.radical,   /* ensure correct size of square-root sign */
+span.integral {
+        /* upright integral signs for better alignment of indices */
+        font-family: "STIXIntegralsUp", STIX;
+        /* font-size: 115%; match apparent size with DejaVu */
+      }
+      span.bracket {
+        /* some "STIX" and "DejaVu Math TeX Gyre" bracket pieces don't fit */
+        font-family: "DejaVu Serif", serif;
+      }
+      span.mathsf,
+      span.textsf {
+        font-family: sans-serif;
+      }
+      span.mathrm,
+      span.textrm {
+        font-family: STIX, "DejaVu Serif", "DejaVu Math TeX Gyre", serif;
+      }
+      span.mathtt,
+      span.texttt {
+        font-family: monospace;
+      }
+      span.text,
+      span.textnormal,
+      span.mathsf,
+      span.mathtt,
+      span.mathrm {
+        font-style: normal;
+      }
+      span.fraktur {
+        font-family: "Lucida Blackletter", eufm10, blackletter;
+      }
+      span.blackboard {
+        font-family: Blackboard, msbm10, serif;
+      }
+      span.scriptfont {
+        font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L",
+          cursive;
+        font-style: italic;
+      }
+      span.mathscr {
+        font-family: MathJax_Script, rsfs10, cursive;
+        font-style: italic;
+      }
+      span.textsc {
+        font-variant: small-caps;
+      }
+      span.textsl {
+        font-style: oblique;
+      }
 
-}
-span.downstackrel {
-	display: block;
-	vertical-align: bottom;
-	padding: 0em;
-}
+      /* Colors */
+      span.colorbox {
+        display: inline-block;
+        padding: 5px;
+      }
+      span.fbox {
+        display: inline-block;
+        border: thin solid black;
+        padding: 2px;
+      }
+      span.boxed,
+      span.framebox {
+        display: inline-block;
+        border: thin solid black;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="document">
+      <div class="container">
+        <!--header container-->
+        <div class="header-container">
+          <nav>
+            <a href="index.html">خانه</a>
+            <a href="blog.html">مقالات</a>
+            <a href="help.html">راهنما</a>
+          </nav>
+        </div>
 
-/* Fonts */
-.formula {
-	font-family: STIX, "DejaVu Serif", "DejaVu Math TeX Gyre", serif;
-}
-span.radical,   /* ensure correct size of square-root sign */
-span.integral { /* upright integral signs for better alignment of indices */
-	font-family: "STIXIntegralsUp", STIX;
-	/* font-size: 115%; match apparent size with DejaVu */
-}
-span.bracket {
-  /* some "STIX" and "DejaVu Math TeX Gyre" bracket pieces don't fit */
-	font-family: "DejaVu Serif", serif;
-}
-span.mathsf, span.textsf {
-	font-family: sans-serif;
-}
-span.mathrm, span.textrm {
-	font-family: STIX, "DejaVu Serif", "DejaVu Math TeX Gyre", serif;
-}
-span.mathtt, span.texttt {
-	font-family: monospace;
-}
-span.text, span.textnormal,
-span.mathsf, span.mathtt, span.mathrm {
-	font-style: normal;
-}
-span.fraktur {
-	font-family: "Lucida Blackletter", eufm10, blackletter;
-}
-span.blackboard {
-	font-family: Blackboard, msbm10, serif;
-}
-span.scriptfont {
-	font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
-	font-style: italic;
-}
-span.mathscr {
-  font-family: MathJax_Script, rsfs10,  cursive;
-  font-style: italic;
-}
-span.textsc {
-	font-variant: small-caps;
-}
-span.textsl {
-	font-style: oblique;
-}
+        <!--ads container-->
+        <div class="ads-container">
+          <div class="adbox">
+            <a
+              class="adlink vrz-lazy"
+              target="_blank"
+              href="https://biz.varzesh3.com/events/click/2717"
+              rel="nofollow"
+              style="
+                background-color: rgb(245, 245, 245);
+                height: 400px;
+                display: block;
+              "
+            >
+              <img
+                class="adimage"
+                id="img-2717"
+                src="https://biz-cdn.varzesh3.com/banners/2023/11/07/d8547444-27a6-4767-8b0c-ad3bfdcebf34.gif"
+                data-origin="https://biz-cdn.varzesh3.com/banners/2023/11/07/d8547444-27a6-4767-8b0c-ad3bfdcebf34.gif"
+                width="160"
+                height="400"
+                alt="لایف استار"
+              />
+            </a>
+          </div>
 
-/* Colors */
-span.colorbox {
-	display: inline-block;
-	padding: 5px;
-}
-span.fbox {
-	display: inline-block;
-	border: thin solid black;
-	padding: 2px;
-}
-span.boxed, span.framebox {
-	display: inline-block;
-	border: thin solid black;
-	padding: 5px;
-}
+          <div class="adbox">
+            <a
+              class="adlink vrz-lazy"
+              target="_blank"
+              href="https://biz.varzesh3.com/events/click/2605"
+              rel="nofollow"
+              style="
+                background-color: rgb(245, 245, 245);
+                height: 300px;
+                display: block;
+              "
+            >
+              <img
+                class="adimage"
+                id="img-2605"
+                src="https://biz-cdn.varzesh3.com/banners/2023/11/20/1472064e-7752-4c0d-aaf1-f93b033354f0.gif"
+                data-origin="https://biz-cdn.varzesh3.com/banners/2023/11/20/1472064e-7752-4c0d-aaf1-f93b033354f0.gif"
+                width="160"
+                height="300"
+                alt="اسنوا "
+              />
+            </a>
+          </div>
 
-</style>
-</head>
-<body>
-<div class="document">
+          <div class="adbox" data-id="2753">
+            <a
+              class="adlink vrz-lazy"
+              target="_blank"
+              href="https://biz.varzesh3.com/events/click/2753"
+              rel="nofollow"
+              style="
+                background-color: rgb(245, 245, 245);
+                height: 200px;
+                display: block;
+              "
+            >
+              <img
+                class="adimage"
+                id="img-2753"
+                src="https://biz-cdn.varzesh3.com/banners/2023/11/13/780c1d99-25e7-426e-a2a4-20376cae7444.gif"
+                data-origin="https://biz-cdn.varzesh3.com/banners/2023/11/13/780c1d99-25e7-426e-a2a4-20376cae7444.gif"
+                width="160"
+                height="200"
+                alt="بانک کار آفرین"
+              />
+            </a>
+          </div>
 
+          <div class="adbox">
+            <a
+              class="adlink vrz-lazy"
+              target="_blank"
+              href="https://biz.varzesh3.com/events/click/2605"
+              rel="nofollow"
+              style="
+                background-color: rgb(245, 245, 245);
+                height: 300px;
+                display: block;
+              "
+            >
+              <img
+                class="adimage"
+                id="img-2605"
+                src="https://biz-cdn.varzesh3.com/banners/2023/11/20/1472064e-7752-4c0d-aaf1-f93b033354f0.gif"
+                data-origin="https://biz-cdn.varzesh3.com/banners/2023/11/20/1472064e-7752-4c0d-aaf1-f93b033354f0.gif"
+                width="160"
+                height="300"
+                alt="اسنوا "
+              />
+            </a>
+          </div>
+        </div>
 
-<center>
-    <h1 dir="rtl">راهنما</h1>
-</center>
+        <!--content container-->
+        <div class="content-container">
+          سرویسی که فایل ها روی آن مستقر شده یک پلتفرم ابری است (PaaS) که در
+          ادامه راهنمای استفاده از آن آمده است.
+          <ul class="rtl simple">
+            <li>
+              با استفاده از مسیر /assets/images به فایل تصاویر دسترسی دارید
+            </li>
+            <li>
+              با استفاده از مسیر /assets/video به فایل وید‌‌‌یو ها دسترسی دارید
+            </li>
+            <li>از طریق help.rst/ میتوانید فایل کد های rst را مشاهده کنید.</li>
+          </ul>
+          <img
+            alt="alternate text"
+            class="align-right"
+            src="assets/images/help.jpg"
+            style="width: 200px; height: 100px"
+          />
+          <table border="1" class="center docutils">
+            <colgroup>
+              <col width="50%" />
+              <col width="50%" />
+            </colgroup>
+            <thead valign="bottom">
+              <tr>
+                <th class="head">ستون 1</th>
+                <th class="head">ستون 2</th>
+              </tr>
+            </thead>
+            <tbody valign="top">
+              <tr>
+                <td>تست</td>
+                <td>تست</td>
+              </tr>
+              <tr>
+                <td>تست</td>
+                <td>تست</td>
+              </tr>
+              <tr>
+                <td>تست</td>
+                <td>تست</td>
+              </tr>
+              <tr>
+                <td>تست</td>
+                <td>تست</td>
+              </tr>
+              <tr>
+                <td>تست</td>
+                <td>تست</td>
+              </tr>
+              <tr>
+                <td>تست</td>
+                <td>تست</td>
+              </tr>
+            </tbody>
+          </table>
+          <table border="1" class="docutils">
+            <caption>
+              تست جدول لیستی
+            </caption>
+            <colgroup>
+              <col width="20%" />
+              <col width="40%" />
+              <col width="40%" />
+            </colgroup>
+            <thead valign="bottom">
+              <tr>
+                <th class="head">ستون 1</th>
+                <th class="head">ستون 2</th>
+                <th class="head">ستون 3</th>
+              </tr>
+            </thead>
+            <tbody valign="top">
+              <tr>
+                <td>تست</td>
+                <td>تست</td>
+                <td>تست</td>
+              </tr>
+              <tr>
+                <td>تست</td>
+                <td>تست</td>
+                <td>تست</td>
+              </tr>
+              <tr>
+                <td>تست</td>
+                <td>تست</td>
+                <td>تست</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="formula">
+            <i>n</i><sub><span class="mathrm">offset</span></sub
+            > = <span class="limits"
+              ><sup class="limit"><i>N</i> − 1</sup
+              ><span class="limit"><span class="bigoperator">∑</span></span
+              ><sub class="limit"><i>k</i> = 0</sub></span
+            ><i>s</i><sub><i>k</i></sub
+            ><i>n</i><sub><i>k</i></sub>
+          </div>
 
-سرویسی که فایل ها روی آن مستقر شده یک پلتفرم ابری است (PaaS) که در ادامه راهنمای استفاده از آن آمده است.<ul class="rtl simple">
-<li>با استفاده از مسیر /assets/images به فایل تصاویر دسترسی دارید</li>
-<li>با استفاده از مسیر /assets/video به فایل وید‌‌‌یو ها دسترسی دارید</li>
-<li>از طریق help.rst/ میتوانید فایل کد های rst را مشاهده کنید.</li>
-</ul>
-<img alt="alternate text" class="align-right" src="assets/images/help.jpg" style="width: 200px; height: 100px;" />
-<table border="1" class="center docutils">
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead valign="bottom">
-<tr><th class="head">ستون 1</th>
-<th class="head">ستون 2</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr><td>تست</td>
-<td>تست</td>
-</tr>
-<tr><td>تست</td>
-<td>تست</td>
-</tr>
-<tr><td>تست</td>
-<td>تست</td>
-</tr>
-<tr><td>تست</td>
-<td>تست</td>
-</tr>
-<tr><td>تست</td>
-<td>تست</td>
-</tr>
-<tr><td>تست</td>
-<td>تست</td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
-<caption>تست جدول لیستی</caption>
-<colgroup>
-<col width="20%" />
-<col width="40%" />
-<col width="40%" />
-</colgroup>
-<thead valign="bottom">
-<tr><th class="head">ستون 1</th>
-<th class="head">ستون 2</th>
-<th class="head">ستون 3</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr><td>تست</td>
-<td>تست</td>
-<td>تست</td>
-</tr>
-<tr><td>تست</td>
-<td>تست</td>
-<td>تست</td>
-</tr>
-<tr><td>تست</td>
-<td>تست</td>
-<td>تست</td>
-</tr>
-</tbody>
-</table>
-<div class="formula">
-<i>n</i><sub><span class="mathrm">offset</span></sub> = <span class="limits"><sup class="limit"><i>N</i> − 1</sup><span class="limit"><span class="bigoperator">∑</span></span><sub class="limit"><i>k</i> = 0</sub></span><i>s</i><sub><i>k</i></sub><i>n</i><sub><i>k</i></sub>
-</div>
-<center>
-    <h1 dir="rtl">کد های نوشته شده این صفحه با rst</h1>
-</center><pre class="code rst literal-block">
-<span class="punctuation">..</span> <span class="operator word">raw</span><span class="punctuation">::</span> html<span class="whitespace">
+          <center>
+            <h1 dir="rtl">کد های نوشته شده این صفحه با rst</h1>
+          </center>
+          <pre class="code rst literal-block">
+    <span class="punctuation">..</span> <span class="operator word">raw</span><span class="punctuation">::</span> html
+    
+        &lt;center&gt;
+            &lt;h1 dir=&quot;rtl&quot;&gt;راهنما&lt;/h1&gt;
+        &lt;/center&gt;
+    
+        سرویسی که فایل ها روی آن مستقر شده یک پلتفرم ابری است (PaaS) که در ادامه راهنمای استفاده از آن آمده است.
+    
+    
+    <span class="punctuation">..</span> <span class="operator word">class</span><span class="punctuation">::</span> rtl
+    
+        <span class="literal number">-</span> با استفاده از مسیر /assets/images به فایل تصاویر دسترسی دارید
+        <span class="literal number">-</span> با استفاده از مسیر /assets/video به فایل وید‌‌‌یو ها دسترسی دارید
+        <span class="literal number">-</span> از طریق help.rst/ میتوانید فایل کد های rst را مشاهده کنید.
+    
+    
+    <span class="punctuation">..</span> <span class="operator word">image</span><span class="punctuation">::</span> assets/images/help.jpg
+    <span class="name class">:height:</span> 100px
+    <span class="name class">:width:</span> 200 px
+    <span class="name class">:alt:</span> alternate text
+    <span class="name class">:align:</span> right
+    
+    <span class="punctuation">..</span>  <span class="operator word">csv-table</span><span class="punctuation">::</span>
+        <span class="name class">:header-rows:</span> 1
+        <span class="name class">:class:</span> center
+    
+        ستون 1, ستون 2
+        تست,  تست
+        تست,  تست
+        تست,  تست
+        تست,  تست
+        تست,  تست
+        تست,  تست
+    
+    
+    <span class="punctuation">..</span> <span class="operator word">list-table</span><span class="punctuation">::</span> تست جدول لیستی
+    <span class="name class">:header-rows:</span> 1
+    <span class="name class">:widths:</span> 10 20 20
+    
+    <span class="literal number">*</span> - ستون 1
+        <span class="literal number">-</span> ستون 2
+        <span class="literal number">-</span> ستون 3
+    <span class="literal number">*</span> - تست
+        <span class="literal number">-</span> تست
+        <span class="literal number">-</span> تست
+    <span class="literal number">*</span> - تست
+        <span class="literal number">-</span> تست
+        <span class="literal number">-</span> تست
+    <span class="literal number">*</span> - تست
+        <span class="literal number">-</span> تست
+        <span class="literal number">-</span> تست
+    
+    <span class="punctuation">..</span> <span class="operator word">math</span><span class="punctuation">::</span>
+    
+        n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
+    </pre>
+        </div>
 
-</span>    &lt;center&gt;<span class="whitespace">
-</span>        &lt;h1 dir=&quot;rtl&quot;&gt;راهنما&lt;/h1&gt;<span class="whitespace">
-</span>    &lt;/center&gt;<span class="whitespace">
-
-</span>    سرویسی که فایل ها روی آن مستقر شده یک پلتفرم ابری است (PaaS) که در ادامه راهنمای استفاده از آن آمده است.<span class="whitespace">
-
-
-</span><span class="punctuation">..</span> <span class="operator word">class</span><span class="punctuation">::</span> rtl<span class="whitespace">
-</span>
-    <span class="literal number">-</span> با استفاده از مسیر /assets/images به فایل تصاویر دسترسی دارید<span class="whitespace">
-</span>    <span class="literal number">-</span> با استفاده از مسیر /assets/video به فایل وید‌‌‌یو ها دسترسی دارید<span class="whitespace">
-</span>    <span class="literal number">-</span> از طریق help.rst/ میتوانید فایل کد های rst را مشاهده کنید.<span class="whitespace">
-
-
-</span><span class="punctuation">..</span> <span class="operator word">image</span><span class="punctuation">::</span> assets/images/help.jpg<span class="whitespace">
-</span><span class="name class">:height:</span> 100px<span class="whitespace">
-</span><span class="name class">:width:</span> 200 px<span class="whitespace">
-</span><span class="name class">:alt:</span> alternate text<span class="whitespace">
-</span><span class="name class">:align:</span> right<span class="whitespace">
-
-</span><span class="punctuation">..</span>  <span class="operator word">csv-table</span><span class="punctuation">::</span><span class="whitespace">
-</span>    <span class="name class">:header-rows:</span> 1<span class="whitespace">
-</span>    <span class="name class">:class:</span> center<span class="whitespace">
-
-</span>    ستون 1, ستون 2<span class="whitespace">
-</span>    تست,  تست<span class="whitespace">
-</span>    تست,  تست<span class="whitespace">
-</span>    تست,  تست<span class="whitespace">
-</span>    تست,  تست<span class="whitespace">
-</span>    تست,  تست<span class="whitespace">
-</span>    تست,  تست<span class="whitespace">
-
-
-</span><span class="punctuation">..</span> <span class="operator word">list-table</span><span class="punctuation">::</span> تست جدول لیستی<span class="whitespace">
-</span><span class="name class">:header-rows:</span> 1<span class="whitespace">
-</span><span class="name class">:widths:</span> 10 20 20<span class="whitespace">
-</span>
-<span class="literal number">*</span> - ستون 1<span class="whitespace">
-</span>    <span class="literal number">-</span> ستون 2<span class="whitespace">
-</span>    <span class="literal number">-</span> ستون 3<span class="whitespace">
-</span><span class="literal number">*</span> - تست<span class="whitespace">
-</span>    <span class="literal number">-</span> تست<span class="whitespace">
-</span>    <span class="literal number">-</span> تست<span class="whitespace">
-</span><span class="literal number">*</span> - تست<span class="whitespace">
-</span>    <span class="literal number">-</span> تست<span class="whitespace">
-</span>    <span class="literal number">-</span> تست<span class="whitespace">
-</span><span class="literal number">*</span> - تست<span class="whitespace">
-</span>    <span class="literal number">-</span> تست<span class="whitespace">
-</span>    <span class="literal number">-</span> تست<span class="whitespace">
-
-</span><span class="punctuation">..</span> <span class="operator word">math</span><span class="punctuation">::</span><span class="whitespace">
-
-</span>    n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
-</pre>
-</div>
-</body>
+        <!--footer container-->
+        <div class="footer-container">
+          <footer>
+            <p>
+              کپی رایت &copy;
+              <a href="https://github.com/modarreszadeh">محمد مدرس زاده</a>
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -8,7 +8,106 @@
 
 body {
   font-family: "vazir";
-  margin-top: 50px;
+}
+
+.adbox {
+  margin-top: 25px;
+}
+
+nav {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+th {
+  color: brown;
+}
+
+#main-title {
+  color: white;
+  background-color: darkgray;
+}
+
+.paragraph-content {
+  color: white;
+  background-color: darkslategray;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 60px;
+}
+
+.header-container {
+  grid-area: header;
+}
+
+.ads-container {
+  grid-area: ads;
+}
+
+.content-container {
+  background: lightgray;
+  grid-area: content;
+}
+
+.footer-container {
+  background: lightpink;
+  grid-area: footer;
+}
+
+.container {
+  font-size: 1.5em;
+  min-height: 300px;
+  width: 100%;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto 1fr auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header"
+    "advert"
+    "content"
+    "footer";
+}
+
+@media (min-width: 300px) {
+  .container {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "ads content"
+      "footer footer";
+  }
+}
+
+@media (min-width: 400px) {
+  .container {
+    grid-template-areas:
+      "header header"
+      "ads   content"
+      "footer footer";
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
 
 div + p {
@@ -32,12 +131,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.paragraph-content {
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -54,17 +147,6 @@ td {
 thead {
   background-color: darkgray;
   color: white;
-}
-
-footer {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-footer > center {
-  color: brown;
 }
 
 @media screen and (max-width: 600px) {
@@ -100,24 +182,4 @@ footer > center {
     background-color: lightgray;
     color: black;
   }
-
-  footer {
-    display: none;
-  }
-}
-
-nav {
-  background-color: darkgray;
-  padding: 10px;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-}
-
-nav a {
-  color: black;
-  margin: 0 15px;
-  text-decoration: none;
-  font-size: 1.2em;
 }
