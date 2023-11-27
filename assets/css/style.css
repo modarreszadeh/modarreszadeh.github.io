@@ -183,3 +183,11 @@ thead {
     color: black;
   }
 }
+
+.btn {
+  font-size: larger;
+  margin: 10px;
+  background-color: coral;
+  border-radius: 10px;
+  font-family: vazir;
+}
